@@ -8,3 +8,4 @@ function solution(price, money, count) {
     return (sum>money)? answer = sum - money :answer = 0
     return answer;
 }
+//new Array(count).fill(price)
