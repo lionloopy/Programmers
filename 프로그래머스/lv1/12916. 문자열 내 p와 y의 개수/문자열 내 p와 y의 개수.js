@@ -1,13 +1,16 @@
 function solution(s){
-    let p = []
-    let y =[]
+    var answer = true;
     s = s.toLowerCase()
+    let a = 0
+    let b = 0
     for(let i=0; i<s.length; i++){
         if(s[i] == 'p'){
-            p.push('p')
-        }else if(s[i] == 'y')
-            y.push('y')
+            a++
+        }
+        if(s[i] == 'y'){
+            b++
+        }
     }
-    let answer = (p.length == y.length)? true : false
+    a == b ? answer = true : answer = false
     return answer;
 }
