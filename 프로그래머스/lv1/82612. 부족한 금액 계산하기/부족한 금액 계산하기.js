@@ -1,11 +1,10 @@
 function solution(price, money, count) {
-    var answer = 0;
-    let num = []
+    var answer = -1;
+    let pay = []
     for(let i=1; i<=count; i++){
-        num.push(price * i)
+        pay.push(price*i) 
     }
-    let sum = num.reduce((a,b) => a+b,0)
-    return (sum>money)? answer = sum - money :answer = 0
+    let sum = pay.reduce((a,b) => a+b,0)
+    sum > money? answer = sum - money : answer = 0
     return answer;
 }
-//new Array(count).fill(price)
