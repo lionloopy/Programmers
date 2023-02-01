@@ -1,21 +1,17 @@
 function solution(s) {
     var answer = '';
-    s = s.split(" ");
-
-
-for (let i = 0; i < s.length; i++) {
-  for (let j = 0; j < s[i].length; j++) {
-    if (j == 0) {
-      answer += s[i][0].toUpperCase();
-    } else if (j % 2 == 0) {
-      answer += s[i][j].toUpperCase();
-    } else if (j % 2 != 0) {
-      answer += s[i][j].toLowerCase();
+    s = s.split(' ')
+    for(let i=0; i<s.length; i++){
+        for(let j=0; j<s[i].length; j++){
+            if(j == 0 || j%2 == 0){
+                answer += s[i][j].toUpperCase()
+            }else if(j%2 != 0){
+                answer += s[i][j].toLowerCase()
+            }
+        }
+        if(i < s.length -1){
+            answer += ' '
+        }
     }
-  }
-  if (i < s.length - 1) {
-    answer += " ";
-  }
-}
     return answer;
 }
